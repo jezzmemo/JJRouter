@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'JJRouter_Example' do
+  pod 'JJRouter', :path => '../'
+
+  target 'JJRouter_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

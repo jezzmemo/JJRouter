@@ -1,0 +1,16 @@
+PODS:
+  - JJRouter (0.1.0)
+
+DEPENDENCIES:
+  - JJRouter (from `../`)
+
+EXTERNAL SOURCES:
+  JJRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JJRouter: 19afcf53244990fc064bd68985d0a0d0b40769e0
+
+PODFILE CHECKSUM: 32fde91cbcb1d918179446da64282440e8d5e353
+
+COCOAPODS: 1.11.2
