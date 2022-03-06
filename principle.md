@@ -34,6 +34,8 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 
 ## 业务组件架构图
 
+![JJRouter all-architecture](https://raw.githubusercontent.com/jezzmemo/JJRouter/master/images/all-architecture.png)
+
 ### 组件之间如何通信
 
 * 字符串解耦
@@ -79,7 +81,9 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 * 基于接口设计，扩展性更好
 * 解决同一层次循环引用问题
 
-### 补充头和实现分离的架构图（Done)
+### 补充头和实现分离的架构图
+
+![JJRouter single module](https://raw.githubusercontent.com/jezzmemo/JJRouter/master/images/single-module.png)
 
 > 头部含有的信息
 
