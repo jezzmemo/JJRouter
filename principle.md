@@ -32,7 +32,7 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 - 业务模块需要有横向的能力，所以要解决业务模块相互引用的问题，而基础模块是不行的，在工程上编译期间就会不通过
 - 工程组织方式不一样，业务模块需要将头和实现分开，工程上是两个模块，基础模块直接是一个模块
 
-## 业务组件架构图
+## 组件架构图
 
 ![JJRouter all-architecture](https://raw.githubusercontent.com/jezzmemo/JJRouter/master/images/all-architecture.png)
 
@@ -76,7 +76,7 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 
 关于这个问题，我的选择最好不需要显示的注册，因为会给开发者带来麻烦，这里的麻烦是指步骤的多余，如果用适当的规则代表显示的注册，使用规则更加简单和易于接受，所以在这个问题上，我的选择是不需要注册。
 
-### 为什么业务模块要分离头和实现
+### 组件分离头和实现
 
 ![JJRouter separate module](https://raw.githubusercontent.com/jezzmemo/JJRouter/master/images/separate-module.png)
 
@@ -85,7 +85,7 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 * 基于接口设计，扩展性更好
 * 解决同一层次循环引用问题
 
-### 补充头和实现分离的架构图
+### 单个组件的详细信息
 
 ![JJRouter single module](https://raw.githubusercontent.com/jezzmemo/JJRouter/master/images/single-module.png)
 
@@ -99,3 +99,11 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 * 接口定义的实现
 * 事件和通知的实现
 * 其他内部不需要对外的实现
+
+### 基于Swift的实现
+
+* __基于以上的理论和选择，JJRouter选择了申明头和具体实现__
+
+* 使用Swift的Extension方式，引用头即可调用到具体实现，__不需要注册__
+
+* Scheme URL还是以传统的注册方式工作

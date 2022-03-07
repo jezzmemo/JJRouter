@@ -11,6 +11,9 @@
 		165813E1977764E94D046E5BFFE339ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		4BA049C6F9B17E429B985B8B4B870F39 /* JJRouter-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB0AD731435BC78C84224B77C0559273 /* JJRouter-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5D418B120CC2F74FDD880BAAB1373DC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		61A5640D27D6502600B71CD0 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A5640C27D6502600B71CD0 /* Target.swift */; };
+		61A5641027D6531B00B71CD0 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A5640F27D6531B00B71CD0 /* Scheme.swift */; };
+		61A5641227D6536300B71CD0 /* URLConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A5641127D6536300B71CD0 /* URLConvertible.swift */; };
 		937AA972B66C29794FF5293E7F06B181 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		94E940F5F21144935CD0975438DAD850 /* JJRouter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E78FC3D7AA0C692239DD85CC12449C5 /* JJRouter-dummy.m */; };
 		9D14ECDE76C83B0B26CCABA8E2B836BB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236718B317DBD6E2B9F0536FA9C7370F /* Router.swift */; };
@@ -50,6 +53,9 @@
 		3E5D6925B9932BB36F358D8562661AA6 /* Pods-JJRouter_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JJRouter_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		40F08CC3E599B2396D2D1833DAE38B9A /* JJRouter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "JJRouter-Info.plist"; sourceTree = "<group>"; };
 		541EAFAC3CCF0CA87F312FED24845F7F /* Pods-JJRouter_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JJRouter_Tests-Info.plist"; sourceTree = "<group>"; };
+		61A5640C27D6502600B71CD0 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		61A5640F27D6531B00B71CD0 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		61A5641127D6536300B71CD0 /* URLConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLConvertible.swift; sourceTree = "<group>"; };
 		70B1C8095D441EF83FE6AC75BC5CE748 /* Pods-JJRouter_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JJRouter_Example-dummy.m"; sourceTree = "<group>"; };
 		71991F5DD16CF68CAB07F297CA1E29DA /* JJRouter.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JJRouter.modulemap; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -167,9 +173,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		61A5640E27D6530200B71CD0 /* Scheme */ = {
+			isa = PBXGroup;
+			children = (
+				61A5641127D6536300B71CD0 /* URLConvertible.swift */,
+				61A5640F27D6531B00B71CD0 /* Scheme.swift */,
+			);
+			path = Scheme;
+			sourceTree = "<group>";
+		};
 		A1119B26C35596E9D3A5BC91AB5B4DB4 /* JJRouter */ = {
 			isa = PBXGroup;
 			children = (
+				61A5640E27D6530200B71CD0 /* Scheme */,
+				61A5640C27D6502600B71CD0 /* Target.swift */,
 				236718B317DBD6E2B9F0536FA9C7370F /* Router.swift */,
 				18AB8F860205BE19E4E9A91FC6B42F80 /* Pod */,
 				4B0BC877BB29B9C676B38FD1F82B0B53 /* Support Files */,
@@ -367,8 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61A5641027D6531B00B71CD0 /* Scheme.swift in Sources */,
+				61A5640D27D6502600B71CD0 /* Target.swift in Sources */,
 				94E940F5F21144935CD0975438DAD850 /* JJRouter-dummy.m in Sources */,
 				9D14ECDE76C83B0B26CCABA8E2B836BB /* Router.swift in Sources */,
+				61A5641227D6536300B71CD0 /* URLConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
