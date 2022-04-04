@@ -62,6 +62,8 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 
 > 组件之组织形态-集中式
 
+![JJRouter centralization](https://raw.githubusercontent.com/jezzmemo/JJRouter/master/images/centralization.png)
+
 无论是使用字符串解耦还是API的方式，都可以用集中式形态，所有的接口都放在一个独立的工程里管理，需要通信的组件，都需要依赖这种集中的组件，由这个集中的组件统一和集中管理，通信
 
 优点就是可控，方便阅读
