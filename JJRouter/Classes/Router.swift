@@ -1,7 +1,15 @@
 import Foundation
 import UIKit
 
+/// Router
 open class Router {
+    
+    /// Service for domain
+    private let domain: String
+    
+    public init(domain: String = "com.jjrouter.www.main") {
+        self.domain = domain
+    }
     
     public static let `default` = Router()
     
@@ -24,6 +32,18 @@ extension Router {
         }
         guard let viewController = t.viewController else { return nil }
         return viewController
+    }
+    
+}
+
+extension Router: CustomDebugStringConvertible, CustomStringConvertible {
+    
+    public var debugDescription: String {
+        return "\(self.domain)"
+    }
+    
+    public var description: String {
+        return "\(self.domain)"
     }
     
 }

@@ -8,5 +8,7 @@
 import Foundation
 
 public protocol Scheme where Self: Target {
+    
     init?(url: URLConvertible)
+    
 }
