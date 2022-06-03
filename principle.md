@@ -111,3 +111,111 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 * Scheme URL还是以传统的注册方式工作
 
 * Scheme方式和显示API方式，独立分开，自由组合
+
+> Swift之API实现
+
+首先抽象出两个`Target`:
+
+```
+public protocol Target {
+    
+}
+
+public protocol ViewControllerTarget {
+    var viewController: UIViewController? { get }
+}
+```
+
+如何将申明和实现分开，示例如下：
+
+先展示申明部分:
+
+```
+// Header
+enum DemoTarget: Target {
+    case login
+}
+```
+
+在展示实现部分:
+
+```
+// Implement
+extension DemoTarget: ViewControllerTarget {
+    
+    var viewController: UIViewController? {
+        switch self {
+        case .login:
+            return nil
+        }
+    }
+    
+}
+```
+
+这里有个细节要说下，有人可能会说，如果用class是否可以，也可以的，只是这里借鉴了`MOYA`的写法，所以用枚举来做示例，可读性更好。
+
+最后通过JJRouter的核心部分来处理各自的`Target`即可，这里简单展示下API设计：
+
+```
+/// Router
+open class Router {
+    
+    public static let `default` = Router()
+    
+    @discardableResult
+    open func push(target: Target, from navigation: UINavigationController? = nil, animated: Bool = true) -> UIViewController? {
+        return nil
+    }
+    
+    @discardableResult
+    open func present(target: Target, from viewController: UIViewController? = nil, animated: Bool = true, completion: (() -> Void)? = nil) -> UIViewController? {
+        return nil
+    }
+}
+```
+
+> Swift之Scheme实现
+
+原理上是和API的设计是类似的，但是他们之间最大的不同是，__API方式是不需要显示注册的，Scheme还是需要手动来注册的__,Scheme的抽象定义如下：
+
+```
+public protocol Scheme {
+    
+    init?(url: URLConvertible)
+    
+    var viewController: UIViewController? { get }
+    
+}
+```
+
+这里再重点说下Scheme的细节，原来上来说，Scheme是通过字符串来解耦的，只用定义字符来实现跨平台的达到同一目的，在使用上注意以下几点：
+
+1. 如果是纯内部Scheme，可以不用公开，模块内部调用即可
+2. 如果是公开的Scheme，你采用的是Header和Implement分开的组件化方案，建议将公开的Scheme字符串，公开到Header
+3. 如果是公开的Scheme，你采用的是中心化的Header，建议将公开的Scheme字符串，公开到中心化的Header
+4. 如果你的Scheme和API，没有任何关联，可以各自实现，如果有关联，建议将Scheme的调用到API那边，这样只用主要维护API即可
+
+最后展示下Register和Open的API设计：
+
+```
+protocol SchemeAction {
+    
+    func register(scheme: Scheme.Type)
+    
+    func viewController(url: URLConvertible) -> UIViewController?
+}
+```
+
+```
+extension Router {
+    
+    open func push(url: URLConvertible, from: UINavigationController? = nil, animated: Bool = true) -> UIViewController? {
+        return nil
+    }
+    
+    open func present(url: URLConvertible, from: UIViewController? = nil, animated: Bool = true, completion: (() -> Void)? = nil) -> UIViewController? {
+        return nil
+    }
+}
+```

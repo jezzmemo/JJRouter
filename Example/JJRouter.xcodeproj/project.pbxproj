@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		617BC5DC2805D442006FD135 /* DemoAScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617BC5DB2805D442006FD135 /* DemoAScheme.swift */; };
+		61F16A912849E30700E909CA /* DemoTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F16A902849E30700E909CA /* DemoTarget.swift */; };
 		66A6A76D391594DFE08AB276 /* Pods_JJRouter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44302370486FB69D4635D715 /* Pods_JJRouter_Tests.framework */; };
 		C414D6B03490DF348B6AC4DF /* Pods_JJRouter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EA0A594D5C37587841C5C04 /* Pods_JJRouter_Example.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		617BC5DB2805D442006FD135 /* DemoAScheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoAScheme.swift; sourceTree = "<group>"; };
+		61F16A902849E30700E909CA /* DemoTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTarget.swift; sourceTree = "<group>"; };
 		7CC2FF1CD2DC04BF66A0794D /* Pods-JJRouter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJRouter_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JJRouter_Tests/Pods-JJRouter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		80F07FDBBD784FC28044F540 /* JJRouter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JJRouter.podspec; path = ../JJRouter.podspec; sourceTree = "<group>"; };
 		8EA0A594D5C37587841C5C04 /* Pods_JJRouter_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JJRouter_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 				617BC5DB2805D442006FD135 /* DemoAScheme.swift */,
+				61F16A902849E30700E909CA /* DemoTarget.swift */,
 			);
 			name = "Example for JJRouter";
 			path = JJRouter;
@@ -337,6 +340,7 @@
 				617BC5DC2805D442006FD135 /* DemoAScheme.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				61F16A912849E30700E909CA /* DemoTarget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
