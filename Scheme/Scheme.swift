@@ -7,8 +7,10 @@
 
 import Foundation
 
-public protocol Scheme where Self: Target {
+public protocol Scheme {
     
     init?(url: URLConvertible)
+    
+    var viewController: UIViewController? { get }
     
 }

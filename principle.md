@@ -109,3 +109,5 @@ Infra Business Layer比Business Layer比下面一层，因为他们之间是上�
 * 使用Swift的Extension方式，引用头即可调用到具体实现，__不需要注册__
 
 * Scheme URL还是以传统的注册方式工作
+
+* Scheme方式和显示API方式，独立分开，自由组合
